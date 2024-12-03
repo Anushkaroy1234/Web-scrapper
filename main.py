@@ -18,7 +18,7 @@ def scrape_and_insert():
         )
         logger.info(f"====== {index+1} DATA INSERTED ====== {res}")
 def start_scheduler():
-    schedule.every().day.at("05:00").do(scrape_and_insert)
+    schedule.every().day.at("04:00").do(scrape_and_insert)
 
     while True:
         schedule.run_pending()
